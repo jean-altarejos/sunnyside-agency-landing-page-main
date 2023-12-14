@@ -52,12 +52,13 @@ nav ul {
     list-style: none;
 }
 
-nav li {
+nav li{
     text-decoration: none;
     display: inline-block;
     padding: 0px 20px;
-    color: var(--white);
 }
+
+
 
 .navbrand {
     cursor: pointer;
@@ -71,6 +72,88 @@ nav li {
     font-family: var(--fraunces);
     cursor: pointer;
 }
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--dark-grayish-blue);
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background: white;
+}
+
+    @media (max-width: 792px) {
+        .hamburger {
+            display: block;
+        }
+
+        .hamburger.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active .bar:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+
+        .hamburger.active .bar:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+
+        a {
+            color: var(--dark-grayish-blue);
+        }
+
+        a:hover {
+            color: var(--grayish-blue);
+        }
+
+        .navmenu{
+            position: absolute;
+            left: -100%;
+            top: 100px;
+            gap: 0;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            background: white;
+            width: 80%;
+            padding: 20px 5px;
+            text-align: center;
+            transition: 0.3s;
+            z-index: 1;
+        }
+
+        .navlinks {
+            margin: 16px 0;
+        }
+
+        .navmenu.active {
+            left: 10%;
+        }
+
+        .cta {
+            background-color: var(--yellow);
+            color: var(--very-dark-desat-blue);
+        }
+
+        footer a {
+            color: var(--dark-desat-cyan)
+        }
+    }
 
 .hero {
     position: relative;
@@ -114,8 +197,6 @@ h2 {
     padding: 30px 0px;
 }
 
-
-
 .learn-more{
     position: relative;
     top: 30px;
@@ -124,6 +205,7 @@ h2 {
     text-transform: uppercase;
     padding: 30px 0px 8px;
     color: var(--very-dark-desat-blue);
+    cursor: pointer;
 }
 
 .learn-more::before {
@@ -148,6 +230,7 @@ h2 {
     text-transform: uppercase;
     padding: 30px 0px 8px;
     color: var(--very-dark-desat-blue);
+    cursor: pointer;
 }
 
 .learn-more-red::before {
@@ -172,6 +255,20 @@ h2 {
     font-size: 16px;
 }
 
+    @media (max-width: 792px){
+        section {
+            flex-direction: column;
+        }
+
+        section div {
+            width: 100%;
+        }
+        #section2 {order: 1;}
+        #section1 {order: 2;}
+        #section3 {order: 3;}
+        #section4 {order: 4;}
+    }
+
 .wrapper {
     position: relative;
 }
@@ -183,13 +280,50 @@ h2 {
     text-align: center;
 }
 
+@media (max-width: 792px) {
+    .wrapper {
+        position: relative;
+    }
+    
+    .wrapper-text {
+        position: absolute;
+        top: 60%;
+        left: 10%;
+        text-align: center;
+        width: 80%;
+    }
+}
+
 .blue {
-    background-color: var(--dark-desat-cyan);
+    color: var(--dark-desat-cyan);
 }
 
 .green {
-    background-color: var(--darkblue);
+    color: var(--darkblue);
 }
+
+
+@media (max-width: 792px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        padding: 30px;
+        width: 100% !important;
+    }
+
+    .gallery {
+        flex-wrap: wrap;
+    }
+    .gallery img {
+        width: 50% !important;
+        margin: 0px;
+        height: 50%;
+    }
+}
+
 .card-wrapper {
     padding: 100px;
  
@@ -198,8 +332,9 @@ h2 {
 .card-wrapper h3{
     font-family: var(--fraunces);
     font-weight: var(--weight900);
-    color: var(--very-dark-desat-blue);
+    color: var(--grayish-blue);
     text-align: center;
+    text-transform: uppercase;
     padding: 50px 0px;
 
 }
@@ -207,6 +342,11 @@ h2 {
 h4{
     color: var(--very-dark-desat-blue);
 }
+
+.title {
+    color: var(--grayish-blue);
+}
+
 .cards {
     display: flex;
     text-align: center;

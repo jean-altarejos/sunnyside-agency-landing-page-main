@@ -6,6 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="/assets/css/style.css"/>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
 
   <title>Frontend Mentor | Sunnyside agency landing page</title>
@@ -23,17 +24,22 @@
         <div class="navbrand">
           <img src="images/logo.svg" alt="sunnyside logo">
         </div>
-        <div class="navitems">
-          <ul>
-            <li>About</li>
-            <li>Services</li>
-            <li>Projects</li>
+        <div>
+          <ul class="navmenu">
+            <li class="navlinks"><a href="#section1">About</a></li>
+            <li class="navlinks"><a href="#section2">Services</a></li>
+            <li class="navlinks"><a href="#section3">Projects</a></li>
             <li>
               <button class="cta">
                 CONTACT
               </button>
             </li>
           </ul>
+        </div>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </div>
       </nav>
     </header>
@@ -44,22 +50,22 @@
   </div>
 
   <section>
-    <div class="section-text">
+    <div id="section1" class="section-text">
       <h2>Transform your brand</h2>
       <p> We are a full-service creative agency specializing in helping brands grow fast. 
         Engage your clients through compelling visuals that do most of the marketing for you.</p>
       <a class="learn-more">Learn more</a>
     </div>
-    <div>
+    <div id="section2">
       <img class="section-img" src="/images/desktop/image-transform.jpg" alt="egg">
     </div>
   </section>
   
   <section>
-    <div>
+    <div id="section3">
       <img class="section-img" src="/images/desktop/image-stand-out.jpg" alt="egg holder">
     </div>
-    <div class="section-text">
+    <div id="section4" class="section-text">
       <h2>Stand out to the right audience</h2>
       <p>  Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places. 
       </p>
@@ -70,14 +76,14 @@
   <section>
     <div class="wrapper">
       <img class="section-img" src="/images/desktop/image-graphic-design.jpg" alt="">
-      <div class="wrapper-text">
+      <div id="1" class="wrapper-text">
         <h2>Graphic design</h2>
         <p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients&#39; attention.</p>
       </div>
     </div>
     <div class="wrapper">
       <img class="section-img" src="/images/desktop/image-photography.jpg" alt="">
-      <div class="wrapper-text">
+      <div id="2" class="wrapper-text">
         <h2>Photography</h2>
         <p>Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>  
       </div>
@@ -87,7 +93,7 @@
 
   <div>
     <div class="card-wrapper">
-      <h3>Client testimonials</h3>
+      <h3 class="title">Client testimonials</h3>
       <div class="cards">
         <div class="card">
           <img src="/images/image-emily.jpg" alt="Emily">
@@ -96,7 +102,7 @@
           </p>
           <div class="card-footer">
             <h4>Emily R.</h4>
-            <p>Marketing Director</p>
+            <p class="title">Marketing Director</p>
           </div>
         </div>
         <div class="card">
@@ -106,7 +112,7 @@
           </p>
           <div class="card-footer">
             <h4>Thomas S.</h4>
-            <p>Chief Operating Officer</p>
+            <p class="title">Chief Operating Officer</p>
           </div>
         </div>
         <div class="card">
@@ -116,7 +122,7 @@
           </p>
           <div class="card-footer">
             <h4>Jennie F.</h4>
-            <p>Business Owner</p>
+            <p class="title">Business Owner</p>
           </div>
         </div>
       </div>
@@ -138,9 +144,9 @@
         </svg>
       </div>
       <ul>
-        <li>About</li>
-        <li>Services</li>
-        <li>Projects</li>
+        <li><a href="#section1">About</a></li>
+        <li><a href="#section2">Services</a></li>
+        <li><a href="#section3">Projects</a></li>
       </ul>
       <div class="socials">
         <img src="/images/icon-facebook.svg" alt="facebook">
@@ -154,6 +160,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Jean M Altarejos</a>.
   </div>
+  <script src="/assets/js/script.js"></script>
 </body>
-
 </html>
